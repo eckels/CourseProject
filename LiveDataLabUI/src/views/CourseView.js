@@ -7,25 +7,20 @@ import ProjectList from '../lists/ProjectList';
 
 function CourseView(props) {
   return (
-    <div>
-        <div>
+    <div className="body-outer">
+      <div className="body-inner">
 
-          <div>
-            <div>
+          <div className="view-container">
+            <div className="title-view-div">
               <img src={Icon} alt="Course icon" />
               <h2>{props.title}</h2>
             </div>
-            <p>{props.semester}</p>
-            <p>{props.description}</p>
-            <p>{props.projects} projects in this course</p>
+            <p className="p-gray">{props.semester}</p>
+            <p className="p-big">{props.description}</p>
+            <p className="p-highlight">{props.projects} projects in this course</p>
           </div>
 
           <ProjectList title="Projects in this Course" />
-
-          <div>
-            <button>GitHub</button>
-            <button>Leaderboard</button>
-          </div>
 
         </div>
     </div>

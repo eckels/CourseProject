@@ -9,11 +9,11 @@ function LinkedAccountsPage() {
     <div className="body-outer">
       <div className="body-inner">
         <h2>Linked Accounts</h2>
-        <div>
+        <div style={{marginBottom: '24px'}}>
           <LinkedAccountCard username="eckels" domain="github.com" time="11/22/2021" />
           <LinkedAccountCard username="eckels" domain="github.com" time="11/25/2021" />
         </div>
-          <button>+ Link New Account</button>
+          <button>Link New Account</button>
       </div>
     </div>
   );

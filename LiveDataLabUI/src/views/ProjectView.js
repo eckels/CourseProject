@@ -11,21 +11,21 @@ function ProjectView(props) {
   var completedClass = (props.completed == 'true') ? 'green' : 'red';
 
   return (
-    <div>
-        <div>
+    <div className="body-outer">
+      <div className="body-inner">
 
-          <div>
-            <div>
+          <div className="view-container">
+            <div className="title-view-div">
               <img src={Icon} alt="Project icon" />
               <h2>{props.title}</h2>
             </div>
-            <p>{props.description}</p>
-            <p>Due: {props.due}</p>
-            <p className={completedClass}>{completed}</p>
-            <p>Started by {props.learners} learners in {props.course}</p>
+            <p className="p-big spacer-small">{props.description}</p>
+            <p className="p-gray">Due: {props.due}</p>
+            <p className={`${completedClass} p-gray spacer`}>{completed}</p>
+            <p className="p-highlight">Started by {props.learners} learners in {props.course}</p>
           </div>
 
-          <div>
+          <div className="button-view-div">
             <button>GitHub</button>
             <button>Leaderboard</button>
           </div>

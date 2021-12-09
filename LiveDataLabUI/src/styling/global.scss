@@ -6,10 +6,11 @@ $white: #ffffff;
 $black: #2a2a2a;
 $accent: #2a64f8;
 $accent-highlight: #5b88fa;
-$background: #fafafa;
+$background: #f7f7f7;
 $red: #FF4365;
 $green: #8FD694;
 $gray-text: #666666;
+$gray-border: #E7E7E7;
 
 $box-shadow: 0 2px 4px 0px rgba($black, 0.15);
 
@@ -33,9 +34,11 @@ h2 {
 h4 {
     margin: 0;
     padding: 0;
-    font-size: 1.15em;
+    font-size: 0.9em;
     color: $black;
-    margin-bottom: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
 .p-title {
@@ -45,6 +48,13 @@ h4 {
     font-weight: bold;
     color: $black;
     margin-bottom: 4px;
+}
+
+.p-big {
+    margin: 0;
+    padding: 0;
+    font-size: 1.05em;
+    color: $black;
 }
 
 .p-black {
@@ -116,11 +126,15 @@ button {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 24px;
+    margin-top: 72px;
     margin-bottom: 24px;
     .body-inner {
         padding: 0 12px;
     }
+}
+
+.list-div {
+    margin-bottom: 32px;
 }
 
 .list-grid {
@@ -135,8 +149,9 @@ button {
     background-color: $white;
     box-shadow: $box-shadow;
     margin: 0;
-    padding: 6px 12px;
+    padding: 12px;
     border-radius: 2px;
+    border: solid 1px $gray-border;
 }
 
 .title-div {
@@ -144,6 +159,7 @@ button {
     justify-content: flex-start;
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 4px;
     img {
         height: 20px;
         opacity: 0.25;
@@ -152,19 +168,47 @@ button {
     }
 }
 
-.course-card {
+.course-card, .project-card {
     width: 300px;
     margin: 0 6px 6px 0;
+    transition: all 0.2s;
+    top: 0;
+    position: relative;
+    .p-title, img {
+        transition: all 0.2s;
+    }
+    &:hover {
+        top: -2px;
+        img {
+            opacity: 0.35;
+        }
+    }
+}
+
+.course-card {
+    .p-label {
+        margin-top: 1px;
+    }
+    .bottom {
+        margin-top: 18px;
+    }
 }
 
 .project-card {
-    width: 300px;
-    margin: 0 6px 6px 0;
+    .p-label {
+        margin-top: 1px;
+    }
+    .bottom {
+        margin-top: 18px;
+    }
 }
 
 .submission-card {
     width: 100%;
     margin-bottom: 6px;
+    .p-black {
+        margin-bottom: 4px;
+    }
 }
 
 .account-card {
@@ -190,5 +234,115 @@ button {
                 opacity: 0.75;
             }
         }
+    }
+}
+
+/* View Styling */
+.title-view-div {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 12px;
+    h2 {
+        margin: 0;
+    }
+    img {
+        height: 42px;
+        width: auto;
+        opacity: 0.5;
+        margin-right: 12px;
+    }
+}
+
+.view-container {
+    margin: 12px 0 32px 0;
+}
+
+.button-view-div {
+    margin-bottom: 36px;
+}
+
+.spacer {
+    margin-bottom: 12px;
+}
+
+.spacer-small {
+    margin-bottom: 6px;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: $white;
+    border-bottom: solid 1px $gray-border;
+    box-shadow: $box-shadow;
+    top: 0;
+    z-index: 500;
+    .nav-interior {
+        padding: 6px 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .navactive {
+        color: $accent;
+    }
+    a {
+        color: $gray-text;
+        transition: all 0.2s;
+    }
+    h1 {
+        margin: 0;
+        font-size: 1.15em;
+        color: $black;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            display: inline-block;
+            margin: 0 12px;
+            font-size: 0.95em;
+        }
+    }
+    .account-div {
+        img {
+            height: 28px;
+            width: auto;
+            opacity: 0.45;
+            transition: all 0.2s;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+        .dropdown {
+            display: none;
+        }
+    }
+}
+
+/* Other stuff */
+.intro {
+    background-color: $accent;
+    padding: 16px;
+    border-radius: 3px;
+    margin-bottom: 24px;
+    h5 {
+        font-size: 1.15em;
+        color: $white;
+        margin: 0;
+        margin-bottom: 4px;
+    }
+    .desc {
+        margin: 0;
+        color: $white;
+        font-size: 0.95em;
+        margin-bottom: 18px;
     }
 }

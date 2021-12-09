@@ -20,7 +20,7 @@ function ProjectCard(props) {
           <p className="p-black">{props.description}</p>
           <p className="p-label">Due: {props.due}</p>
           <p className={`p-label ${completedClass}`}>{completed}</p>
-          <p className="p-label">Started by {props.learners} learners in {props.course}</p>
+          <p className="p-label bottom">Started by {props.learners} learners in {props.course}</p>
         </div>
     </div></Link>
   );

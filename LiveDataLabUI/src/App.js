@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  NavLink,
   Link,
 } from "react-router-dom";
 
@@ -16,6 +17,8 @@ import LinkedAccountsPage from './pages/LinkedAccountsPage';
 import CourseView from './views/CourseView';
 import ProjectView from './views/ProjectView';
 
+import Account from './assets/account.png';
+
 import './App.css';
 import './styling/global.scss';
 
@@ -24,22 +27,27 @@ function App() {
     <Router>
       <div>
         <nav>
-          <Link to="/"><h1>LiveDataLab</h1></Link>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="/create">Create</Link>
-            </li>
-          </ul>
-          <div>
-            <Link to="/courses">Courses</Link>
-            <Link to="/my-content">My Content</Link>
-            <Link to="/accounts">Linked Accounts</Link>
+          <div className="nav-interior">
+            <Link to="/CourseProject"><h1>LiveDataLab</h1></Link>
+            <ul>
+              <li>
+                <NavLink activeClassName="navactive" to="/CourseProject">Home</NavLink>
+              </li>
+              <li>
+                <NavLink activeClassName="navactive" to="/projects">Projects</NavLink>
+              </li>
+              <li>
+                <NavLink activeClassName="navactive" to="/create">Create</NavLink>
+              </li>
+            </ul>
+            <div className="account-div">
+              <img src={Account} alt="Account icon" />
+              <div className="dropdown">
+                <Link to="/courses">Courses</Link>
+                <Link to="/my-content">My Content</Link>
+                <Link to="/accounts">Linked Accounts</Link>
+              </div>
+            </div>
           </div>
         </nav>
         <Switch>

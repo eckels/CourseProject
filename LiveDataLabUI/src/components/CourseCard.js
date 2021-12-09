@@ -13,9 +13,9 @@ function CourseCard(props) {
             <img src={Icon} alt="Course icon" />
             <p className="p-title">{props.title}</p>
           </div>
-          <p className="p-label">{props.semester}</p>
           <p className="p-black">{props.description}</p>
-          <p className="p-label">Started by {props.learners} learners</p>
+          <p className="p-label">{props.semester}</p>
+          <p className="p-label bottom">Started by {props.learners} learners</p>
           <p className="p-label">{props.projects} projects in this course</p>
         </div>
     </div></Link>

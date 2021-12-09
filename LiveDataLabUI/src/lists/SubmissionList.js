@@ -6,7 +6,7 @@ import SubmissionCard from '../components/SubmissionCard';
 
 function SubmissionList(props) {
   return (
-    <div>
+    <div className="list-div">
       <div>
         <h4>{props.title}</h4>
         <div className="list-grid">
