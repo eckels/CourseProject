@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "/CourseProject/static/css/main.029bcb7a.chunk.css",
-    "main.js": "/CourseProject/static/js/main.fe042a66.chunk.js",
-    "main.js.map": "/CourseProject/static/js/main.fe042a66.chunk.js.map",
-    "runtime-main.js": "/CourseProject/static/js/runtime-main.5c82d97a.js",
-    "runtime-main.js.map": "/CourseProject/static/js/runtime-main.5c82d97a.js.map",
-    "static/js/2.e68cc4db.chunk.js": "/CourseProject/static/js/2.e68cc4db.chunk.js",
-    "static/js/2.e68cc4db.chunk.js.map": "/CourseProject/static/js/2.e68cc4db.chunk.js.map",
-    "static/js/3.2937493e.chunk.js": "/CourseProject/static/js/3.2937493e.chunk.js",
-    "static/js/3.2937493e.chunk.js.map": "/CourseProject/static/js/3.2937493e.chunk.js.map",
+    "main.css": "/CourseProject/static/css/main.a6ad89e1.chunk.css",
+    "main.js": "/CourseProject/static/js/main.b09510e7.chunk.js",
+    "main.js.map": "/CourseProject/static/js/main.b09510e7.chunk.js.map",
+    "runtime-main.js": "/CourseProject/static/js/runtime-main.f48abb9c.js",
+    "runtime-main.js.map": "/CourseProject/static/js/runtime-main.f48abb9c.js.map",
+    "static/js/2.f16f9ecb.chunk.js": "/CourseProject/static/js/2.f16f9ecb.chunk.js",
+    "static/js/2.f16f9ecb.chunk.js.map": "/CourseProject/static/js/2.f16f9ecb.chunk.js.map",
+    "static/js/3.8f7c6443.chunk.js": "/CourseProject/static/js/3.8f7c6443.chunk.js",
+    "static/js/3.8f7c6443.chunk.js.map": "/CourseProject/static/js/3.8f7c6443.chunk.js.map",
     "index.html": "/CourseProject/index.html",
-    "static/css/main.029bcb7a.chunk.css.map": "/CourseProject/static/css/main.029bcb7a.chunk.css.map",
-    "static/js/2.e68cc4db.chunk.js.LICENSE.txt": "/CourseProject/static/js/2.e68cc4db.chunk.js.LICENSE.txt"
+    "static/css/main.a6ad89e1.chunk.css.map": "/CourseProject/static/css/main.a6ad89e1.chunk.css.map",
+    "static/js/2.f16f9ecb.chunk.js.LICENSE.txt": "/CourseProject/static/js/2.f16f9ecb.chunk.js.LICENSE.txt",
+    "static/media/account.152e4568.png": "/CourseProject/static/media/account.152e4568.png",
+    "static/media/cancel.d8eb5d0c.svg": "/CourseProject/static/media/cancel.d8eb5d0c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5c82d97a.js",
-    "static/js/2.e68cc4db.chunk.js",
-    "static/css/main.029bcb7a.chunk.css",
-    "static/js/main.fe042a66.chunk.js"
+    "static/js/runtime-main.f48abb9c.js",
+    "static/js/2.f16f9ecb.chunk.js",
+    "static/css/main.a6ad89e1.chunk.css",
+    "static/js/main.b09510e7.chunk.js"
   ]
 }
