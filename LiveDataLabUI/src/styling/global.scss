@@ -28,7 +28,7 @@ h2 {
     padding: 0;
     font-size: 1.35em;
     color: $black;
-    margin-bottom: 18px;
+    margin-bottom: 28px;
 }
 
 h4 {
@@ -119,8 +119,6 @@ button {
     }
 }
 
-/* Nav Bar */
-
 /* Container Styling */
 .body-outer {
     max-width: 1200px;
@@ -169,7 +167,7 @@ button {
 }
 
 .course-card, .project-card {
-    width: 300px;
+    width: 262px;
     margin: 0 6px 6px 0;
     transition: all 0.2s;
     top: 0;
@@ -286,6 +284,7 @@ nav {
     top: 0;
     z-index: 500;
     .nav-interior {
+        height: 42px;
         padding: 6px 12px;
         display: flex;
         justify-content: space-between;
@@ -316,18 +315,44 @@ nav {
         }
     }
     .account-div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        cursor: pointer;
+        position: relative;
+        &:hover {
+            img {
+                opacity: 0.75;
+            }
+            .dropdown {
+                display: block;
+            }
+        }
         img {
             height: 28px;
             width: auto;
             opacity: 0.45;
             transition: all 0.2s;
-            cursor: pointer;
-            &:hover {
-                opacity: 0.75;
-            }
+            margin-right: 4px;
         }
         .dropdown {
             display: none;
+            position: absolute;
+            background-color: $white;
+            border: solid 1px $gray-border;
+            border-radius: 2px;
+            padding: 6px 12px;
+            box-shadow: $box-shadow;
+            left: -40px;
+            top: 24px;
+            a {
+                display: block;
+                margin: 8px 0;
+                transition: all 0.2s;
+                &:hover {
+                    color: $accent;
+                }
+            }
         }
     }
 }

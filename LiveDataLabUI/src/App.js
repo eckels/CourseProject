@@ -42,6 +42,7 @@ function App() {
             </ul>
             <div className="account-div">
               <img src={Account} alt="Account icon" />
+              <p className="p-label">Evan Eckels</p>
               <div className="dropdown">
                 <Link to="/courses">Courses</Link>
                 <Link to="/my-content">My Content</Link>
