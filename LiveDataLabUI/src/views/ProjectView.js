@@ -35,6 +35,7 @@ function ProjectView(props) {
           <div className="score-container">
             <h4>Highest Score: 100%</h4>
             <p>Submission 5</p>
+            <p>Leaderboard Rank: 32</p>
           </div>
 
           <SubmissionList title="Project Submissions" data={props.submissions} />
