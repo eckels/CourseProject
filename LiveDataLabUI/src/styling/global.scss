@@ -414,6 +414,13 @@ nav {
 }
 
 @media (max-width: 650px) {
+    .body-outer {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 86px;
+        margin-bottom: 24px;
+    }
     nav {
         position: fixed;
         width: 100%;
