@@ -23,11 +23,10 @@ function ProjectView(props) {
             <p className="p-gray">Due: {props.due}</p>
             <p className={`${completedClass} p-gray spacer`}>{completed}</p>
             <p className="p-highlight">Started by {props.learners} learners in {props.course}</p>
-          </div>
-
-          <div className="button-view-div">
-            <button>GitHub</button>
-            <button>Leaderboard</button>
+            <div className="button-view-div">
+              <button>GitHub</button>
+              <button>Leaderboard</button>
+            </div>
           </div>
 
           <SubmissionList title="Project Submissions" />
