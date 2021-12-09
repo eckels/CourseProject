@@ -4,8 +4,10 @@ import React from 'react';
 
 function CreatePage() {
   return (
-    <div>
-        CreatePage
+    <div className="body-outer">
+      <div className="body-inner">
+          <h2>Create New Content</h2>
+        </div>
     </div>
   );
 }

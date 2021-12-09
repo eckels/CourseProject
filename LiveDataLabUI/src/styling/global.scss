@@ -2,11 +2,193 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
 /* Colors */
+$white: #ffffff;
+$black: #2a2a2a;
+$accent: #2a64f8;
+$accent-highlight: #5b88fa;
+$background: #fafafa;
+$red: #FF4365;
+$green: #8FD694;
+$gray-text: #666666;
+
+$box-shadow: 0 2px 4px 0px rgba($black, 0.15);
+
+body {
+    background-color: $background;
+}
+
+a {
+    text-decoration: none;
+}
 
 /* Text Styling */
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.35em;
+    color: $black;
+    margin-bottom: 18px;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.15em;
+    color: $black;
+    margin-bottom: 12px;
+}
+
+.p-title {
+    margin: 0;
+    padding: 0;
+    font-size: 1.05em;
+    font-weight: bold;
+    color: $black;
+    margin-bottom: 4px;
+}
+
+.p-black {
+    margin: 0;
+    padding: 0;
+    font-size: 0.95em;
+    color: $black;
+    margin-bottom: 0;
+}
+
+.p-gray {
+    margin: 0;
+    padding: 0;
+    font-size: 0.95em;
+    color: $gray-text;
+    margin-bottom: 0;
+}
+
+.p-highlight {
+    margin: 0;
+    padding: 0;
+    font-size: 0.95em;
+    color: $accent;
+    margin-bottom: 0;
+}
+
+.p-label {
+    margin: 0;
+    padding: 0;
+    font-size: 0.85em;
+    color: $gray-text;
+    margin-bottom: 0;
+}
+
+.red {
+    color: $red !important;
+}
+
+.green {
+    color: $green !important;
+}
 
 /* Elements */
+
+button {
+    color: $white;
+    font-weight: bold;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    margin: 0;
+    outline: none;
+    background-color: $accent;
+    border: none;
+    padding: 12px 24px;
+    transition: all 0.2s;
+    border-radius: 2px;
+    box-shadow: $box-shadow;
+    cursor: pointer;
+    margin-right: 6px;
+    &:hover {
+        background-color: $accent-highlight;
+    }
+}
 
 /* Nav Bar */
 
 /* Container Styling */
+.body-outer {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    .body-inner {
+        padding: 0 12px;
+    }
+}
+
+.list-grid {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+/* Card Styling */
+.card {
+    background-color: $white;
+    box-shadow: $box-shadow;
+    margin: 0;
+    padding: 6px 12px;
+    border-radius: 2px;
+}
+
+.title-div {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+    img {
+        height: 20px;
+        opacity: 0.25;
+        width: auto;
+        margin-right: 4px;
+    }
+}
+
+.course-card {
+    width: 300px;
+    margin: 0 6px 6px 0;
+}
+
+.project-card {
+    width: 300px;
+    margin: 0 6px 6px 0;
+}
+
+.submission-card {
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.account-card {
+    width: 100%;
+    margin-bottom: 6px;
+    .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .icons {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+            margin-left: 10px;
+            height: 20px;
+            width: auto;
+            transition: all 0.2s;
+            opacity: 0.45;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+    }
+}

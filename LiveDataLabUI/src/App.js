@@ -13,7 +13,11 @@ import CoursesPage from './pages/CoursesPage';
 import MyContentPage from './pages/MyContentPage';
 import LinkedAccountsPage from './pages/LinkedAccountsPage';
 
+import CourseView from './views/CourseView';
+import ProjectView from './views/ProjectView';
+
 import './App.css';
+import './styling/global.scss';
 
 function App() {
   return (
@@ -54,8 +58,14 @@ function App() {
           <Route path="/accounts">
             <LinkedAccountsPage />
           </Route>
+          <Route path="/view-course">
+            <CourseView title="CS 410" semester="Fall 2021" description="Text Information Systems" projects="12" />
+          </Route>
+          <Route path="/view-project">
+            <ProjectView title="MP1" description="First MP of the course" due="Sept 18, 2021" completed="true" learners="200" course="CS 410" />
+          </Route>
           <Route path="/">
-            <HomePage />
+            <HomePage name="Evan" />
           </Route>
         </Switch>
       </div>
