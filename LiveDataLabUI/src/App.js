@@ -47,6 +47,7 @@ function App() {
                 <Link to="/courses">Courses</Link>
                 <Link to="/my-content">My Content</Link>
                 <Link to="/accounts">Linked Accounts</Link>
+                <button>Log Out</button>
               </div>
             </div>
           </div>
