@@ -13,14 +13,11 @@ function HomePage(props) {
         <div className="intro">
           <h5>Welcome back, {props.name}!</h5>
           <p className="desc">Continue working on...</p>
-          <div className="list-grid">
-            <ProjectCard title="My Project" description="description here" due="Sept 13, 2021" completed="false" learners="300" course="CS 410" />
-            <ProjectCard title="My second Project" description="description here" due="Sept 17, 2021" completed="false" learners="300" course="CS 410" />
-          </div>
+          <ProjectList title="" data={props.recent} />
         </div>
-        <ProjectList title="Upcoming Projects" />
+        <ProjectList title="Upcoming Projects" data={props.upcoming} />
 
-        <SubmissionList title="Submission History" />
+        <SubmissionList title="Submission History" data={props.submissions} />
       </div>
     </div>
   );

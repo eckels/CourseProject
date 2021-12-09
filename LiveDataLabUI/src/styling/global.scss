@@ -9,6 +9,7 @@ $accent-highlight: #5b88fa;
 $background: #f7f7f7;
 $red: #FF4365;
 $green: #8FD694;
+$green-border: #0f6116;
 $gray-text: #666666;
 $gray-border: #E7E7E7;
 
@@ -24,6 +25,18 @@ a {
 
 /* Text Styling */
 h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.35em;
+    color: $white;
+    margin-bottom: 28px;
+    background-color: $accent;
+    padding: 24px 16px;
+    box-shadow: $box-shadow;
+    border-radius: 3px;
+}
+
+h3 {
     margin: 0;
     padding: 0;
     font-size: 1.35em;
@@ -135,6 +148,12 @@ button {
     margin-bottom: 32px;
 }
 
+.intro {
+    .list-div {
+        margin-bottom: 0;
+    }
+}
+
 .list-grid {
     display: flex;
     justify-content: flex-start;
@@ -183,6 +202,28 @@ button {
     }
 }
 
+@media (max-width: 650px) {
+    .list-grid {
+        display: block;
+    }
+    .course-card, .project-card {
+        width: calc(100% - 26px);
+        margin: 0 0px 6px 0;
+        transition: all 0.2s;
+        top: 0;
+        position: relative;
+        .p-title, img {
+            transition: all 0.2s;
+        }
+        &:hover {
+            top: -2px;
+            img {
+                opacity: 0.35;
+            }
+        }
+    }
+}
+
 .course-card {
     .p-label {
         margin-top: 1px;
@@ -202,7 +243,7 @@ button {
 }
 
 .submission-card {
-    width: 100%;
+    width: calc(100% - 26px);
     margin-bottom: 6px;
     .p-black {
         margin-bottom: 4px;
@@ -210,7 +251,7 @@ button {
 }
 
 .account-card {
-    width: 100%;
+    width: calc(100% - 26px);
     margin-bottom: 6px;
     .row {
         display: flex;
@@ -242,7 +283,7 @@ button {
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 12px;
-    h2 {
+    h3 {
         margin: 0;
     }
     img {
@@ -254,7 +295,7 @@ button {
 }
 
 .view-container {
-    margin: 12px 0 32px 0;
+    margin: 12px 0 8px 0;
     border: solid 1px $gray-border;
     background-color: white;
     padding: 14px;
@@ -293,6 +334,16 @@ nav {
         margin-left: auto;
         margin-right: auto;
     }
+    .logo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        img {
+            height: 22px;
+            width: auto;
+            margin-right: 4px;
+        }
+    }
     .navactive {
         color: $accent;
     }
@@ -302,7 +353,7 @@ nav {
     }
     h1 {
         margin: 0;
-        font-size: 1.15em;
+        font-size: 1.1em;
         color: $black;
     }
     ul {
@@ -362,6 +413,109 @@ nav {
     }
 }
 
+@media (max-width: 650px) {
+    nav {
+        position: fixed;
+        width: 100%;
+        background-color: $white;
+        border-bottom: solid 1px $gray-border;
+        box-shadow: $box-shadow;
+        top: 0;
+        z-index: 500;
+        .nav-interior {
+            height: auto;
+            padding: 6px 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 8px;
+            img {
+                height: 22px;
+                width: auto;
+                margin-right: 4px;
+            }
+        }
+        .navactive {
+            color: $accent;
+        }
+        a {
+            color: $gray-text;
+            transition: all 0.2s;
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.1em;
+            color: $black;
+            margin-right: 60px;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                display: inline-block;
+                margin: 0 12px;
+                font-size: 0.95em;
+            }
+        }
+        .account-div {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            cursor: pointer;
+            position: relative;
+            &:hover {
+                img {
+                    opacity: 0.75;
+                }
+                .dropdown {
+                    display: block;
+                }
+            }
+            img {
+                height: 28px;
+                width: auto;
+                opacity: 0.45;
+                transition: all 0.2s;
+                margin-right: 0px;
+            }
+            .p-label {display: none;}
+            .dropdown {
+                display: none;
+                position: absolute;
+                background-color: $white;
+                border: solid 1px $gray-border;
+                border-radius: 2px;
+                padding: 6px 12px;
+                box-shadow: $box-shadow;
+                left: -150px;
+                top: 26px;
+                width: 150px;
+                a {
+                    display: block;
+                    margin: 8px 0;
+                    transition: all 0.2s;
+                    &:hover {
+                        color: $accent;
+                    }
+                }
+                button {
+                    margin-top: 8px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
 /* Other stuff */
 .intro {
     background-color: $accent;
@@ -379,5 +533,68 @@ nav {
         color: $white;
         font-size: 0.95em;
         margin-bottom: 18px;
+    }
+}
+
+.score-container {
+    background-color: $green;
+    border-radius: 3px;
+    padding: 12px 12px;
+    box-shadow: $box-shadow;
+    margin-bottom: 32px;
+    h4 {
+        margin: 0;
+        color: $green-border;
+        font-size: 0.95em;
+        margin-bottom: 2px;
+    }
+    p {
+        font-size: 0.8em;
+        color: $green-border;
+        margin: 0;
+    }
+}
+
+.create-card {
+    background-color: $white;
+    border: solid 1px $gray-border;
+    box-shadow: $box-shadow;
+    margin: 0 6px 12px 0;
+    padding: 12px;
+    width: 28%;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    transition: all 0.2s;
+    img {
+        width: 56px;
+        height: auto;
+        opacity: 0.35;
+        margin-bottom: 12px;
+        transition: all 0.2s;
+    }
+    h4 {
+        text-transform: none;
+        margin-bottom: 6px;
+        font-size: 1.15em;
+    }
+    p {
+        margin: 0;
+        color: $gray-text;
+        font-size: 0.95em;
+    }
+    &:hover {
+        top: -2px;
+        img {
+            opacity: 0.5;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .create-card {
+        margin: 0 0px 12px 0;
+        padding: 12px;
+        width: calc(100% - 26px);
     }
 }

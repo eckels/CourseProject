@@ -17,7 +17,19 @@ import LinkedAccountsPage from './pages/LinkedAccountsPage';
 import CourseView from './views/CourseView';
 import ProjectView from './views/ProjectView';
 
+import Logo from './assets/logo.png';
 import Account from './assets/account.png';
+
+import {
+  recentProjects,
+  upcomingProjects,
+  allProjects,
+  yourCourses,
+  allCourses,
+  projectSubmissions,
+  submissionHistory,
+  linkedAccounts
+} from './data/data';
 
 import './App.css';
 import './styling/global.scss';
@@ -28,7 +40,7 @@ function App() {
       <div>
         <nav>
           <div className="nav-interior">
-            <Link to="/CourseProject"><h1>LiveDataLab</h1></Link>
+            <Link to="/CourseProject" className="logo"><img src={Logo} alt="logo" /><h1>LiveDataLab</h1></Link>
             <ul>
               <li>
                 <NavLink activeClassName="navactive" to="/CourseProject">Home</NavLink>
@@ -54,28 +66,28 @@ function App() {
         </nav>
         <Switch>
           <Route path="/projects">
-            <ProjectsPage />
+            <ProjectsPage recent={recentProjects} upcoming={upcomingProjects} all={allProjects} />
           </Route>
           <Route path="/create">
             <CreatePage />
           </Route>
           <Route path="/courses">
-            <CoursesPage />
+            <CoursesPage yourCourses={yourCourses} allCourses={allCourses} />
           </Route>
           <Route path="/my-content">
-            <MyContentPage />
+            <MyContentPage projects={recentProjects} courses={yourCourses} />
           </Route>
           <Route path="/accounts">
-            <LinkedAccountsPage />
+            <LinkedAccountsPage accounts={linkedAccounts} />
           </Route>
           <Route path="/view-course">
-            <CourseView title="CS 410" semester="Fall 2021" description="Text Information Systems" projects="12" />
+            <CourseView title="CS 410" semester="Fall 2021" description="Text Information Systems" projcount="12" projects={upcomingProjects} />
           </Route>
           <Route path="/view-project">
-            <ProjectView title="MP1" description="First MP of the course" due="Sept 18, 2021" completed="true" learners="200" course="CS 410" />
+            <ProjectView title="MP1" description="First MP of the course" due="Sept 18, 2021" completed="true" learners="200" course="CS 410" submissions={projectSubmissions} />
           </Route>
           <Route path="/">
-            <HomePage name="Evan" />
+            <HomePage name="Evan" recent={recentProjects} upcoming={upcomingProjects} submissions={submissionHistory} />
           </Route>
         </Switch>
       </div>

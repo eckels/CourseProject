@@ -10,10 +10,9 @@ function ProjectList(props) {
       <div>
         <h4>{props.title}</h4>
         <div className="list-grid">
-          <ProjectCard title="My Project" description="description here" due="Sept 13, 2021" completed="true" learners="300" course="CS 410" />
-          <ProjectCard title="My Project 2" description="description here" due="Sept 13, 2021" completed="true" learners="500" course="CS 420" />
-          <ProjectCard title="My Project" description="description here" due="Sept 13, 2021" completed="true" learners="300" course="CS 410" />
-          <ProjectCard title="My Project" description="description here" due="Sept 13, 2021" completed="true" learners="300" course="CS 410" />
+          {props.data.map(item => (
+            <ProjectCard title={item.title} description={item.description} due={item.due} completed={item.completed} learners={item.learners} course={item.course} />
+          ))}
         </div>
       </div>
     </div>

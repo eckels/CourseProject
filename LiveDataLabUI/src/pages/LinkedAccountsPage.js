@@ -4,14 +4,15 @@ import LinkedAccountCard from '../components/LinkedAccountCard';
 
 //import '../styling/HomePage.scss';
 
-function LinkedAccountsPage() {
+function LinkedAccountsPage(props) {
   return (
     <div className="body-outer">
       <div className="body-inner">
         <h2>Linked Accounts</h2>
         <div style={{marginBottom: '24px'}}>
-          <LinkedAccountCard username="eckels" domain="github.com" time="11/22/2021" />
-          <LinkedAccountCard username="eckels" domain="github.com" time="11/25/2021" />
+          {props.accounts.map(item => (
+            <LinkedAccountCard username={item.username} domain={item.domain} time={item.time} />
+          ))}
         </div>
           <button>Link New Account</button>
       </div>

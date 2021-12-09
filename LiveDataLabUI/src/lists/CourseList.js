@@ -10,10 +10,9 @@ function CourseList(props) {
       <div>
         <h4>{props.title}</h4>
         <div className="list-grid">
-          <CourseCard title="My course" semester="Fall 2021" description="description here" learners="300" projects="32" />
-          <CourseCard title="My course" semester="Fall 2021" description="description here" learners="300" projects="32" />
-          <CourseCard title="My course" semester="Fall 2021" description="description here" learners="300" projects="32" />
-          <CourseCard title="My course" semester="Fall 2021" description="description here" learners="300" projects="32" />
+          {props.data.map(item => (
+            <CourseCard title={item.title} semester={item.semester} description={item.description} learners={item.learners} projects={item.projects} />
+          ))}
         </div>
       </div>
     </div>
