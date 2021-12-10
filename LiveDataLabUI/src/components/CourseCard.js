@@ -7,8 +7,8 @@ import Icon from '../assets/course.png';
 
 function CourseCard(props) {
   return (
-    <Link to="/view-course"><div className="card course-card">
-        <div>
+    <div className="card course-card">
+        <Link to="/view-course"><div>
           <div className="title-div">
             <img src={Icon} alt="Course icon" />
             <p className="p-title">{props.title}</p>
@@ -17,8 +17,8 @@ function CourseCard(props) {
           <p className="p-label">{props.semester}</p>
           <p className="p-label bottom">Started by {props.learners} learners</p>
           <p className="p-label">{props.projects} projects in this course</p>
-        </div>
-    </div></Link>
+        </div></Link>
+    </div>
   );
 }
 

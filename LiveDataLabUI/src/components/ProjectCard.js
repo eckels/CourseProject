@@ -11,8 +11,8 @@ function ProjectCard(props) {
   var completedClass = (props.completed == 'true') ? 'green' : 'red';
 
   return (
-    <Link to="/view-project"><div className="card project-card">
-        <div>
+    <div className="card project-card">
+        <Link to="/view-project"><div>
           <div className="title-div">
             <img src={Icon} alt="Project icon" />
             <p className="p-title">{props.title}</p>
@@ -21,8 +21,8 @@ function ProjectCard(props) {
           <p className="p-label">Due: {props.due}</p>
           <p className={`p-label ${completedClass}`}>{completed}</p>
           <p className="p-label bottom">Started by {props.learners} learners in {props.course}</p>
-        </div>
-    </div></Link>
+        </div></Link>
+    </div>
   );
 }
 
