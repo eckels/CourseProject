@@ -11,7 +11,7 @@ function SubmissionCard(props) {
         <div>
           <p className="p-black"><span style={{fontWeight: 'bold'}}>{props.name}</span> - {props.url}</p>
           <p className="p-label">Submission {props.number} at {props.time}</p>
-          <p className="p-label">Status: <span className={statusClass}>{props.status}</span></p>
+          <p className="p-label">Status: <span className={statusClass} style={{fontWeight: 'bold'}}>{props.status}</span></p>
         </div>
     </div>
   );
