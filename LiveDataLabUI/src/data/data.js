@@ -124,9 +124,9 @@ export { allProjects };
 
 const linkedCourse = [
   {
-    title: 'My courses',
+    title: 'CS 410',
     semester: 'Fall 2021',
-    description: 'beeboop',
+    description: 'Text Information Systems',
     learners: '300',
     projects: '32'
   }
@@ -146,7 +146,7 @@ const yourCourses = [
     semester: 'Fall 2021',
     description: 'Database Systems',
     learners: '400',
-    projects: '32'
+    projects: '16'
   }
 ];
 export { yourCourses };
@@ -164,14 +164,14 @@ const allCourses = [
     semester: 'Fall 2021',
     description: 'Database Systems',
     learners: '400',
-    projects: '32'
+    projects: '12'
   },
   {
     title: 'CS441',
     semester: 'Fall 2021',
     description: 'Applied Machine Learning',
     learners: '600',
-    projects: '32'
+    projects: '23'
   },
   {
     title: 'CS241',
