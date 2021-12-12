@@ -8,6 +8,6 @@ Progress Report: https://github.com/eckels/CourseProject/blob/main/CS_410_Projec
 
 Project Documentation: https://github.com/eckels/CourseProject/blob/main/Project_Documentation.pdf <br />
 
-Software Usage Tutorial: 
+Software Usage Tutorial: https://youtu.be/yIUBn_H1z8w <br />
 
 Live Demo Website: https://eckels.github.io/CourseProject
